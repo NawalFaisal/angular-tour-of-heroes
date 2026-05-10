@@ -1,0 +1,15 @@
+<!-- title -->
+<h2> Heroes Dashboard</h2>
+<!-- Remeber we have to change our DOM so we need a *ngFor -->
+  <!-- basically a pointer that goes into our tree directory and changes or adds etc --> 
+<div class = "heroes">
+    <!-- a is anchored lets us know this is clickable -->
+    <a *ngFor = "let hero of heroes" routerLink= "/detail/{{hero.id}}"> {{hero.name}} </a>
+
+</div>
+
+
+<!-- {{}}        → TypeScript → HTML (interpolation, display a value)
+[ ]         → TypeScript → HTML (property binding)
+( )         → HTML → TypeScript (event binding)
+[( )]       → both directions (two way binding) -->
